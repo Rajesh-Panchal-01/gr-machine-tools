@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G R Machine Tools</title>
+  <style>
+    body { margin:0; font-family: Arial, sans-serif; }
+    header { background:#0a1f44; color:white; padding:15px; display:flex; justify-content:space-between; }
+    nav a { color:white; margin:0 10px; text-decoration:none; }
+    section { padding:50px 20px; }
+    .hero { background:#f4f4f4; text-align:center; }
+    .services { display:grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr)); gap:20px; }
+    .card { border:1px solid #ddd; padding:20px; border-radius:10px; }
+    footer { background:#0a1f44; color:white; text-align:center; padding:15px; }
+    input, textarea { width:100%; padding:10px; margin:10px 0; }
+    button { padding:10px 20px; background:#0a1f44; color:white; border:none; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h2>G R Machine Tools</h2>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="home" class="hero">
+  <h1>Precision Engineering Solutions</h1>
+  <p>CNC Retrofitting | Machine Reconditioning | Maintenance Services</p>
+</section>
+
+<section id="about">
+  <h2>About Company</h2>
+  <p>G R Machine Tools specializes in CNC retrofitting, machine reconditioning, and industrial maintenance services. Established in 2015, we provide reliable and cost-effective solutions to improve machine performance.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">
+      <h3>CNC Retrofitting</h3>
+      <p>Upgrade your machines with advanced CNC systems.</p>
+    </div>
+    <div class="card">
+      <h3>Machine Reconditioning</h3>
+      <p>Restore old machines to optimal performance.</p>
+    </div>
+    <div class="card">
+      <h3>Maintenance Services</h3>
+      <p>Preventive and breakdown maintenance solutions.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form onsubmit="submitForm(event)">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+  <p id="msg"></p>
+</section>
+
+<footer>
+  <p>© 2026 G R Machine Tools</p>
+</footer>
+
+<script>
+function submitForm(e){
+  e.preventDefault();
+  document.getElementById('msg').innerText = 'Message sent successfully!';
+}
+</script>
+
+</body>
+</html>
